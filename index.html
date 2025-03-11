@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duet – The App for Couples</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duet – Together, Simplified</title>
   <style>
     /* Base Styles */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       color: #333;
-      line-height: 1.6;
       background: #fff;
+      line-height: 1.6;
     }
     a {
       text-decoration: none;
@@ -19,23 +19,38 @@
     }
     /* Hero Section */
     .hero {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      background: #222;
       text-align: center;
-      background: #f9f9f9;
       padding: 0 20px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
     }
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
+      color: #fff;
     }
     .hero p {
       font-size: 1.2rem;
-      max-width: 600px;
       margin-bottom: 2rem;
+      color: #fff;
     }
     .cta {
       background: #0070f3;
@@ -48,14 +63,21 @@
     .cta:hover {
       background: #005bb5;
     }
+    .hero-image {
+      margin-top: 2rem;
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
     /* Features Section */
     .features {
       padding: 60px 20px;
       text-align: center;
     }
     .features h2 {
-      margin-bottom: 40px;
       font-size: 2rem;
+      margin-bottom: 40px;
     }
     .feature-list {
       display: flex;
@@ -69,8 +91,8 @@
       margin: 0 auto;
     }
     .feature h3 {
-      margin-bottom: 10px;
       font-size: 1.5rem;
+      margin-bottom: 10px;
     }
     .feature p {
       font-size: 1rem;
@@ -82,15 +104,13 @@
       background: #f9f9f9;
     }
     .signup h2 {
-      margin-bottom: 20px;
       font-size: 2rem;
+      margin-bottom: 20px;
     }
     .signup p {
-      margin-bottom: 30px;
       font-size: 1.1rem;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 30px auto;
     }
     /* Footer */
     footer {
@@ -111,9 +131,13 @@
 <body>
   <!-- Hero Section -->
   <header class="hero">
-    <h1>Duet</h1>
-    <p>Simplify your journey together with Duet – the app designed for couples, by couples.</p>
-    <a href="#signup" class="cta">Get Started</a>
+    <div class="hero-content">
+      <h1>Duet</h1>
+      <p>Together, simplified. Experience a modern way for couples to connect and track their journey.</p>
+      <a href="#signup" class="cta">Get Started</a>
+      <!-- Main iPhone image -->
+      <img src="iphone-main.jpg" alt="Duet on iPhone" class="hero-image">
+    </div>
   </header>
 
   <!-- Features Section -->
@@ -121,16 +145,16 @@
     <h2>Why Duet?</h2>
     <div class="feature-list">
       <div class="feature">
+        <h3>Intuitive Interface</h3>
+        <p>A minimal design that lets you focus on your shared journey without distractions.</p>
+      </div>
+      <div class="feature">
         <h3>Seamless Collaboration</h3>
-        <p>Manage shared goals and experiences effortlessly with a unified dashboard.</p>
+        <p>Track, share, and celebrate milestones together with an integrated dashboard.</p>
       </div>
       <div class="feature">
-        <h3>Simplicity First</h3>
-        <p>A minimal, intuitive interface that keeps the focus on what matters most.</p>
-      </div>
-      <div class="feature">
-        <h3>Track Your Progress</h3>
-        <p>Celebrate milestones together and stay motivated every step of the way.</p>
+        <h3>Stay In Sync</h3>
+        <p>Real-time updates and simple notifications keep both partners connected.</p>
       </div>
     </div>
   </section>
@@ -138,7 +162,7 @@
   <!-- Signup Section -->
   <section id="signup" class="signup">
     <h2>Join the Duet Community</h2>
-    <p>Start your journey together—sign up today to experience a simpler way to collaborate and connect.</p>
+    <p>Start your journey together—sign up today and experience the simplicity of sharing life’s moments.</p>
     <a href="#" class="cta">Sign Up Now</a>
   </section>
 
