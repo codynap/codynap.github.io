@@ -23,11 +23,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: space-between;
+      min-height: 100vh;
       background: #222;
       text-align: center;
-      padding: 0 20px;
+      padding: 50px 20px;
+      box-sizing: border-box;
     }
     .hero::after {
       content: "";
@@ -41,11 +42,14 @@
       position: relative;
       z-index: 2;
       max-width: 800px;
+      margin: auto;
     }
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
       color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
     .hero p {
       font-size: 1.2rem;
@@ -134,18 +138,18 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Duet</h1>
-      <p>Together, simplified. Experience a modern way for couples to connect and track their journey.</p>
+      <p>Together, simplified. <br> Experience a modern way for couples to connect and track their journey.</p>
       <!-- Main iPhone image -->
       <img src="iphone-main.jpg" alt="Duet on iPhone" class="hero-image">
     </div>
-    <div>
-      <p>Coming soon to the app store.</p>
+    <div class="app-store-notice" style="position: relative; z-index: 2; margin-top: 30px;">
+      <p style="color: white; font-size: 1.1rem; font-weight: 600;">Coming soon to the app store.</p>
     </div>
   </header>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Duet. All rights reserved.</p>
+    <p>&copy; 2025 Duet. All rights reserved. <a href="privacy.html" style="color: #0070f3; text-decoration: underline;">Privacy Policy</a></p>
   </footer>
 </body>
 </html>
